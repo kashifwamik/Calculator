@@ -23,21 +23,23 @@ function App() {
 
         const operators=["+", "-", "*", "/"]
         const lastChar=calVal.slice(-1);
-       if(operators.includes(lastChar) && operators.includes(value)) {
-     //Allow minus sign after another operator for negative numbers
+           if(operators.includes(lastChar) && operators.includes(value)) {
+             //Allow minus sign after another operator for negative numbers
               if(value=="-" && lastChar !=="-"){
               setCalVal(calVal + value);
+            }else if(value=="+" && lastChar !=="+"){
+              setCalVal(calVal + value);
             }
-             else{
+            else{
               setCalVal(calVal.slice(0, -1)+ value);
+            }
 
-          }
        } else{
       // Allow only one decimal point per number
           if (value === "." && calVal.slice(-1) === ".") {
         return;
       }
-      const newDisplayValue = calVal + value;
+         const newDisplayValue = calVal + value;
       setCalVal(newDisplayValue);
     }
   }
