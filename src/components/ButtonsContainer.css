@@ -1,0 +1,34 @@
+
+#buttons-container{
+  
+  width:100%;
+  height:250px;
+  background-color: black;
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(5,1fr);
+  }
+.buttons{
+  background-color: darkslategray;
+  color:white;
+ box-sizing: border-box;
+  border:1px solid black;
+  font-size:25px;
+  
+}
+#clear{
+  grid-column: span 2;
+  background-color:rgba(255, 0, 0, 0.817);
+
+}
+#equals{
+ background-color: #0047AB;
+ grid-row:span 2
+ 
+}
+#zero{
+  grid-column:span 2;
+}
+#divide, #multiply, #subtract, #add{
+  background-color: grey;
+}
